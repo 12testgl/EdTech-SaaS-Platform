@@ -1,4 +1,4 @@
-# JavaScript (React + Express) Screen Recording :metal:
+# JavaScript (React + Express) Screen Recording App :metal:
 
 Общие требования к реализации:
 
