@@ -19,15 +19,22 @@ export const saveData = async (data, username) => {
   const tempFilePath = `${dirPath}/temp-${fileName}`
   const finalFilePath = `${dirPath}/${fileName}`
 
-  let fileHandle
+  let fileHandle;
+  
   try {
     fileHandle = await open(dirPath)
-  } catch {
+  } 
+
+  catch {
     await mkdir(dirPath)
-  } finally {
+  } 
+  
+  finally {
+
     if (fileHandle) {
       fileHandle.close()
     }
+
   }
 
   try {
@@ -51,7 +58,9 @@ export const saveData = async (data, username) => {
         console.log(`*** File ${fileName} created`)
       })
       .save(finalFilePath, dirPath)
-  } catch (e) {
+  } 
+  
+  catch (e) {
     console.log('*** saveData', e)
   }
 }
